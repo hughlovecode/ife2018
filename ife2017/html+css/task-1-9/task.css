@@ -1,0 +1,795 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 1255px;
+  width:100%;
+  
+}
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.row{
+  width: 100%;
+  display: table;
+}
+.col-md-12{
+  height: 55px;
+  width: 100%;
+  background-color: rgb(67,135,186);
+}
+.col-md-3{
+  position: absolute;
+  height: calc(100% - 55px);
+  width: 260px;
+  background-color: rgb(43,46,60);
+  float: left;
+}
+.col-md-9{
+  position: absolute;
+  height: calc(100% - 55px);
+  width: calc(100% - 260px);
+  min-width: 1000px;
+  background-color: rgb(238,238,238);
+  right: 0px;
+}
+.logo{
+  height: 55px;
+  width: 80px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+.img-logo{
+  width: 37px;
+  height: 37px;
+  position: relative;
+  right: 0px;
+  vertical-align: middle;
+ }
+ .login{
+    width: 50px;
+    height: 18px;
+    float: right;
+    margin-right: 100px;
+    position: relative;
+    top: calc(50% - 9px);
+    
+ }
+ .search{
+  text-align: right;
+  height: 30px;
+  width: 220px;
+  float: right;
+  position: relative;
+  top: calc(50% - 10px);
+  padding-right: 50px;
+   }
+  .user{
+    height: 150px;
+    width: 260px;
+    overflow: hidden;
+  }
+  .userImg{
+    height: 96px;
+    width: 100px;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
+    border-right: 20px;    
+  }
+  .userName{
+    height: 96px;
+    width: 140px;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    color: white
+  }
+  .head-left{
+    height: 30px;
+    width: 79px;
+    border-right: 1px solid rgb(50,52,67);
+    font-size: 14px;
+    color: white;
+    float: left;
+    text-align: center;
+    padding-left: 50px;
+  }
+  .head-right{
+    height: 30px;
+    width: 79px;
+    border-left: 1px solid rgb(50,52,67);
+    font-size: 14px;
+    color: white;
+    float:right;
+    text-align: center;
+    padding-right: 50px;
+  }
+  .userTab{
+    height: 180px;
+    width: 240px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: rgb(57,61,77);
+  }
+  .userTab-row{
+    height: 20px;
+    width: calc(100% - 40px);
+    padding-left: 40px; 
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  a.ex1:hover div{background-color: rgb(57,61,77)}
+  .userTab-img{
+    height: 16px;
+    width: 16px;
+    overflow: hidden; 
+    float: left;
+  }
+  .userTab-row1{
+    height: 20px;
+    width: calc(100% - 26px);
+    font-size: 14px;
+    float: right;
+    padding-left: 10px;
+    color: white
+  }
+  .userTab-row2{
+    height: 20px;
+    width: calc(100% - 62px);
+    font-size: 14px;
+    float: right;
+    padding-left: 10px;
+    color: white
+  }
+  .userTab-row3{
+    height: 20px;
+    width: calc(100% - 62px);
+    font-size: 14px;
+    float: right;
+    color: white
+  }
+  .navigation{
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    font-size: 20px;
+  }
+  .content{
+    height: 1000px;
+    width: 890px;
+    margin-top: 20px;
+    padding-left: calc(50% - 445px);
+
+  }
+  .content-leftblank{ 
+    width: calc(50% - 445px);
+
+    height: calc(100% - 50px);/*不设置min-widtj就不会导致溢出，不知道为什么*/
+    float: left;
+  }
+  .content-rightblank{
+    
+    width: calc(50% - 445px);
+    height: calc(100% - 50px);
+    float: right;
+  }
+  .content-divcolor{
+    background-color: white
+  }
+  .content-row1{
+    height: 84px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgb(183,183,183);  
+    padding-top: 10px; 
+    position: relative;
+  }
+  .select{
+    appearance:none;
+  -moz-appearance:none;
+    -webkit-appearance:none;/*这是清楚safria的内置select格式*/
+  background: url(img/black-arrow.gif) no-repeat right 2px center;
+  border-radius: 5px;
+  background-color: white;
+}
+.content-row1-swap{
+  height: 44px;
+  width: 29px;
+  position: absolute;
+  top: 24px;
+  left: 350px;
+  background-image: url(img/change.gif);
+  background-size: cover;
+  display: table-cell;
+}
+  .content-row2{
+    height: 84px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgb(183,183,183);  
+    padding-top: 10px; 
+    position: relative;
+  }
+  .content-row2-leftChange{
+    height: 84px;
+    width: 30px;
+    background-image: url(img/leftChang.png);
+    background-size: cover;
+    overflow: hidden;
+    margin-right: 5px;
+    float: left;
+    background-color: white
+  }
+  .content-row2-price{
+    height: 80px;
+    width: 110px;
+    border-top: 4px solid white;
+    background-color: white;
+    color: rgb(236,102,0);
+    font-size: 20px;
+    margin-right: 5px; 
+    float: left;
+  }
+  .content-row2-rightChange{
+    height: 84px;
+    width: 30px;
+    background-image: url(img/rightChange.png);
+    background-size: cover;
+    overflow: hidden;
+    margin-right: 5px;
+    float: left;
+    background-color: white
+  }
+  .content-row2-history{
+    height: 84px;
+    width: 130px;
+    background-color: white;
+    overflow: hidden;
+    display: table-cell;
+    
+  }
+  .content-row2-time{
+    text-align: center;
+    font-size: 20px; 
+    
+  }
+  .content-row2-symbol{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(172,172,172);
+    padding-bottom: 5px;
+  }
+  .content-row2-money{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(236,102,0);
+    padding-bottom: 5px; 
+  }
+ a.ex2:hover div{
+  border-top: 4px solid rgb(67,135,186);
+  height: 80px;
+ }
+ .content-row3{
+  height: 70px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+ }
+
+.content-row3-box1{
+  height: 70px;
+  width: 196px;
+  display: table-cell;
+  border-left: 4px solid rgb(68,178,158);
+  border-right: 30px solid rgb(238,238,238);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.content-row3-box2{
+  height: 70px;
+  width: 196px;
+  display: table-cell;
+  border-left: 4px solid rgb(57,139,194);
+  border-right: 30px solid rgb(238,238,238);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.content-row3-box3{
+  height: 70px;
+  width: 196px;
+  display: table-cell;
+  border-left: 4px solid rgb(207,74,54);
+  border-right: 30px solid rgb(238,238,238);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.content-row3-box4{
+  height: 70px;
+  width: 196px;
+  display: table-cell;
+  border-left: 4px solid rgb(226,205,71);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.content-row3-squre{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 50px;
+  width: 70px;
+  
+}
+.row3-b{
+  display: block;
+  font-size: 18px;
+  padding:5px;
+}
+.row3-space-row4{
+  height: 10px;
+  width: 100%
+}
+.content-row4-leftTable{
+  height: 355px;
+  width: 530px;
+  display: table-cell;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  
+}
+.left-space-right{
+  height: 355px;
+  width: 10px;
+  display: table-cell;
+}
+.content-row4-rightTable{
+  height: 355px;
+  width: 350px;
+  display: table-cell;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: white;
+  position: relative;
+  
+}
+.row4-row1{
+  height: 40px;
+  width: 100%;
+  background-color: rgb(246,247,248);
+  border-bottom: 1px solid rgb(224,226,227);
+  position: absolute;
+  top: 0;
+}
+.row4-row2{
+  height: 45px;
+  width: 275px;
+  border-top: 20px solid white;
+  display: inline-block;
+  margin-right: 40px;
+  margin-left: 40px;
+  border-bottom: 1px solid rgb(224,226,227);
+}
+.row4-b{
+  color: rgb(210,209,209);
+}
+.row4-row3-a{
+  height: 45px;
+  width: 109px;
+  float: left;
+  margin-left: 40px;
+  border-bottom: 1px solid rgb(224,226,227);
+  border-right: 1px solid rgb(224,226,227);
+
+}
+.row4-row3-b{
+  height: 45px;
+  width: 165px;
+  float: left;
+  margin-right: 40px;
+  border-bottom: 1px solid rgb(224,226,227);
+}
+.row4-row4{
+  height: 145px;
+  width: 275px;
+  margin-right: 40px;
+  margin-left: 40px;
+  border-bottom: 1px solid rgb(224,226,227);
+  position: absolute;
+  top: 150px;
+}
+.row5-button{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;/*这是清楚safria的内置select格式*/
+  height: 35px;
+  width: 70px;
+  border:1px solid black;
+  font-size: 16px; 
+  border-radius: 5px;
+  background-color: rgb(91,150,197);
+  color: white;
+
+}
+a.ex-button:hover button
+{ background-color: white;
+  color:  rgb(91,150,197)
+}
+.content-b{
+  display: inline-block;
+  font-size: 16px;
+  color: rgb(189,200,208);
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.row5-row2{
+  margin-top: 41px;
+  height: 30px;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px);
+  border-bottom: 2px solid rgb(184,212,236)
+}
+.select2{
+    appearance:none;
+  -moz-appearance:none;
+    -webkit-appearance:none;/*这是清楚safria的内置select格式*/
+  background: url(img/black-arrow.gif) no-repeat right 2px center;
+  border-radius: 5px;
+  border:1px solid rgb(208,208,209);
+  background-color: white;
+  height: 20px;
+
+}
+.row5-row3{
+  height: 35px;
+  padding-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(100% - 40px);
+  border-bottom: 2px solid rgb(229,229,229);
+}
+.row5-span{
+  font-size: 20px;
+}
+.row5-row4{
+  height: 200px;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.row5-date{
+  height: 38px;
+  width: 42.28px;
+  border: 1px solid white;
+  float: left;
+}
+a.ex-date:hover div{
+  border: 1px solid rgb(244,218,131);
+}
+.carTable{
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  height: 255px;
+  width: 430px;
+  
+}
+.carTable tr:hover{
+  background-color: rgb(245,246,247);
+}
+.span1a{
+  display: block;
+  position: relative;
+  margin-left: 5px
+}
+.span1a:after{
+  content: '';                 /*CSS伪类用法*/
+  position: absolute;         /*定位背景横线的位置*/
+  top: 40%;
+  background: rgb(237,110,82);       /*宽和高做出来的背景横线*/
+  width: 48%;
+  height: 5px;
+  left: 30%;
+}
+.span1b:after{
+  content: '';                 /*CSS伪类用法*/
+  position: absolute;         /*定位背景横线的位置*/
+  top: 40%;
+  background: rgb(220,220,220);       /*宽和高做出来的背景横线*/
+  width: 12%;
+  height: 5px;
+  left: 78%;
+}
+
+.span2a{
+  display: block;
+  position: relative;
+  margin-left: 5px
+}
+.span2a:after{
+  content: '';                 /*CSS伪类用法,必写，否则无内容无法撑开*/
+  position: absolute;         /*定位背景横线的位置*/
+  top: 40%;
+  background: rgb(237,110,82);       /*宽和高做出来的背景横线*/
+  width: 42%;
+  height: 5px;
+  left: 30%;
+}
+.span2b:after{
+  content: '';                 /*CSS伪类用法*/
+  position: absolute;         /*定位背景横线的位置*/
+  top: 40%;
+  background: rgb(220,220,220);       /*宽和高做出来的背景横线*/
+  width: 18%;
+  height: 5px;
+  left: 72%;
+}
+
+.span3a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span3a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 40%;
+  background-color: rgb(237,110,82); 
+  top: 40%;
+  left:30%;
+}
+.span3b:after{
+  content: '';
+  height: 5px;
+  width: 20%;
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  background-color: rgb(220,220,220); 
+}
+.span4a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span4a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 35%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span4b:after{
+  content: '';
+  height: 5px;
+  width: 25%;
+  position: absolute;
+  top: 40%;
+  left: 65%;
+  background-color: rgb(220,220,220); 
+}
+.span5a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span5a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 33%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span5b:after{
+  content: '';
+  height: 5px;
+  width: 27%;
+  position: absolute;
+  top: 40%;
+  left: 63%;
+  background-color: rgb(220,220,220); 
+}
+.span6a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span6a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 30%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span6b:after{
+  content: '';
+  height: 5px;
+  width: 30%;
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  background-color: rgb(220,220,220); 
+}
+.span7a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span7a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 25%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span7b:after{
+  content: '';
+  height: 5px;
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: rgb(220,220,220); 
+}
+.span8a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span8a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 20%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span8b:after{
+  content: '';
+  height: 5px;
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  background-color: rgb(220,220,220); 
+}
+.span9a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span9a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 15%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span9b:after{
+  content: '';
+  height: 5px;
+  width: 45%;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  background-color: rgb(220,220,220); 
+}
+.span10a{
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+.span10a:after{
+  content: ''; 
+  position: absolute;
+  height: 5px;
+  width: 10%;
+  background-color: rgb(127,203,240); 
+  top: 40%;
+  left:30%;
+}
+.span10b:after{
+  content: '';
+  height: 5px;
+  width: 50%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  background-color: rgb(220,220,220); 
+}
+
+
+
+/*第一组项目的table，没搞懂的地方*/
+.tablediv{
+  height: 282px;
+  width: 490px;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  top: 50px;
+  left: 20px;
+  overflow: hidden;
+}
+
+
+.test-box{width: 488px;height: 282px;position: relative;top: -20px;right: 2px}
+.test-box>.test-tab{width:100%;}
+.test-box .test-label{background-color: #eee;display: inline-block;width: 15%;text-align: center;font-size: 16px;line-height: 24px;box-sizing: border-box;}
+.test-label{position: absolute;top: 0;border:solid #ccc; border-width:1px 0px 1px 1px;border-radius: 5px 5px 0px 0px}
+.test-tab:nth-child(1) .test-label{left: 0;}   /*nth-child规定每个子元素中的label的位置*/
+.test-tab:nth-child(2) .test-label{left: 15%;}
+.test-tab:nth-child(3) .test-label{left: 30%;}
+ /*.test-tab:last-child .test-label{border-right-width:1px;}*/
+.test-tab:nth-child(4) .test-label{left: 45%;}
+.test-tab:nth-child(5) .test-label{left: 60%;}
+.test-box .content{background-color: #fff;height: 280px;display: none;}/*控制内容*/
+.test-box input.test-radio{display: none;}
+.test-box input:checked~.test-label{background-color: #fff;border-bottom: 1px solid #fff;}
+.test-box input:checked~.content{display: block;}
+td:hover{
+background-color: rgb(244,245,246);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

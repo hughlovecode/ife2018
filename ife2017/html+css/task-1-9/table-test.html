@@ -1,0 +1,187 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>table-test</title>
+	<style type="text/css">
+		       *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab{
+            width: 300px;
+            height: 150px;
+            margin-left: 30px;
+            margin-top: 30px;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input[type='radio']{
+            display: none;
+        }
+
+        input[type='radio']:checked~div[class^='mod']{
+            display: block;
+        }
+
+        input[type='radio']:checked~label{
+            background: orange;
+        }
+
+        .tab label{
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .label-1{
+            left: 0;
+            top: 0;
+        }
+
+        .label-2{
+            left: 60px;
+            top: 0;
+        }       
+
+        [class^='mod']{
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            display: none;
+        }	</style>
+</head>
+<body>
+	<div class="tab">
+         <div>
+            <input type="radio" id="r-1" name="tab" checked>
+            <label for="r-1" class="label-1">第一张</label>
+            <div class="mod-1">
+                <ul>
+                    <li>275万购昌平邻铁三居</li>
+                    <li>总价20万买一居</li>
+                    <li>200万内购五环三居</li>
+                    <li>北京首现零首付楼盘</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div>
+            <input type="radio" id="r-2" name="tab">
+            <label for="r-2" class="label-2">第二张</label>
+            <div class="mod-2">
+                <ul>
+                    <li>新中式的酷色温情</li>
+                    <li>深圳房价大跌,每平8W</li>
+                    <li>800万买沙井三房</li>
+                    <li>宝安房价平均900W</li>
+                </ul>
+            </div>
+        </div>   
+
+    </div>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table-tab</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+			       *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab{
+            width: 300px;
+            height: 150px;
+            margin-left: 30px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input[type='radio']{
+            display: none;
+        }
+
+        input[type='radio']:checked~div[class^='mod']{
+            display: block;
+        }
+
+        input[type='radio']:checked~label{
+            background: orange;
+            border-radius: 5px solid rgb(239,239,242)
+        }
+
+        .tab label{
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .label-1{
+            left: 0;
+            top: 0;
+        }
+
+        .label-2{
+            position: absolute;
+            left: 60px;
+            top: 0;
+        }       
+
+        [class^='mod']{
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            display: none;
+        }	
+	</style>
+</head>
+<body>
+	<div>
+            <input type="radio" id="r-1" name="tab" checked> 
+            <label for="r-1" class="label-1">第一张</label>
+            <div class="mod-1">
+                <table cellspacing="0" border="1" cellspacing="0">
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+				</table>
+            </div>
+        </div>
+
+
+        <div>
+           <input type="radio" id="r-2" name="tab"> 
+            <label for="r-2" class="label-2">第二张</label>
+            <div class="mod-2">
+                <table cellspacing="0">
+					<tr><td>购买材料二</td><td>购买材料二</td><td>购买材料二</td><td>购买材二</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+					<tr><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td><td>购买材料一</td></tr>
+				</table>            </div>
+        </div>   
+
+    </div>
+
+
+</body>
+</html>

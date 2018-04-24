@@ -1,0 +1,232 @@
+.div{
+			width: 980px;
+			height: 1386px;
+			
+}
+.div-top{
+	width: 892px;
+	height: 61px;
+	margin-left: 44px;
+	margin-right: 44px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid #938e8c;
+}
+.div-top-left{
+	height: 61px;
+	width: 110px;
+	float: left;
+	background-color: red;
+}
+.div-top-left-text{
+	height: 12px;
+	width: 100px;
+	position: relative;
+	bottom: -49px;
+	font-size: 12px;
+	color: #ffffff;
+	float: left;
+	font-family: SimHei;
+}
+.div-top-right{
+	height: 12px;
+	width: 100px;
+	float: right;
+	position: relative;
+	bottom: -49px;
+	font-size: 12px;
+	color: #d45d5c;
+	text-align: right
+}
+/*左上角图片*/
+.div-img1{
+	width: 641px;
+	height: 301px;
+	background-image: url(img/img1.jpg);
+	background-size: cover; /*图像的缩放，使之充满整个cover*/
+	float: left           
+}
+.div1{
+	width: 892px;
+	height: 301px;
+	margin-left: 44px;
+	margin-right: 44px;
+	margin-bottom: 20px;
+	
+}
+/*半透明效果*/
+.div-img1-left{
+	height: 301px;
+	width: 191px;
+	float: left;
+	opacity: 0.3;      /*设置透明参数*/
+	background-color: blue;
+}
+.div-img1-right{
+	height: 301px;
+	width: 191px;
+	float: right;
+	opacity: 0.3;
+	background-color: red;
+}
+/*右上文字*/
+.div1-right{
+	float: right;
+	
+	border-top:2px solid #cc8091;
+	width: 203px;
+	height: 301px
+}
+.div-p{
+	float: left;
+	width: 100px;
+	height: 33px;
+	position: relative;
+	top: 15px
+}
+.div2{
+	height: 300px;
+	width: 641px;
+	margin-left: 44px;
+	margin-bottom: 20px;
+}
+.div2-left{
+	float: left;
+	width: 221px;
+	height: 100%;
+	margin-right: 20px;
+	
+}
+.div2-mid{
+	float: left;
+	width:200px;
+	height: 100%;
+	margin-right: 20px; 
+
+	
+}
+.div2-right{
+	float: left;
+	width: 180px;
+	height: 100%;
+	
+}
+.span2{
+	font-size: 16px;
+	text-decoration: underline;
+	text-transform: capitalize;
+}
+.p2{
+	color: #231815;
+	font-size: 12px;
+	opacity: 0.7
+}
+.span3{
+	color: #cd4a48;
+	font-size: 12px;
+	opacity: 0.7;
+	font-style: italic;
+}
+.span4{
+	color: #231815;
+	font-size: 16px;
+	opacity: 0.7;
+}
+.div3{
+	width: 892px;
+	height: 613px;
+	margin-right:44px;
+	margin-left: 44px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #938e8c
+}
+.div3-left{
+	width: 414px;
+	height: 593px;
+	margin-right: 20px;
+	float: left;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.div3-right{
+	width: 458px;
+	height: 613px;
+	float: right;
+	
+}
+.div3-left-top{
+	height: 167px;
+	width: 414px;
+	border-bottom: 2px solid #11456b;
+}
+.div3-left-img{
+	width: 120px;
+	height: 240px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	float: right;
+	background-image: url(img/img3.jpeg);
+	background-size: cover;
+}
+.div3-right-top{
+	width: 458px;
+	height: 275px;
+	margin-bottom: 20px;
+	background-image: url(img/img2.jpg);
+	background-size: cover
+}
+.div3-right-bottom{
+	width: 458px;
+	height: 298px;
+	margin-bottom: 20px;
+	background-color: rgb(237,237,214);
+}
+.div3-right-top-bottom{
+	width: 458px;
+	height: 61px;
+	position: relative;
+	top: 214px;
+	opacity: 0.3;
+	background-color: black;
+}
+.div-right-top-bottom-div{
+	width: 400px;
+	height: 44px;
+	position: relative;
+	right: -50px;
+	top: 8px;
+	border-left: 3px solid #72b16a;
+}
+.div-right-bottom-bottomleft{
+	height: 160px;
+	width: 260px;
+	background-color: rgb(213,94,92);
+	position: absolute;
+	top: 1155px;
+	right: 455px;
+}
+.div-right-bottom-bottomright{
+	height: 160px;
+	width: 199px;
+	position: absolute;
+	top: 1155px;
+	right: 255px;
+	
+	}
+.div-right-bottom-zero{
+	height: 86px;
+	width: 60px;
+	position: relative;
+	top: 37px;
+	float: left;
+	color: white;
+	font-size: 86px;
+	border-right: 2px solid white;
+}
+.div-right-bottom-one{
+	height: 86px;
+	width: 198px;
+	position: relative;
+	top: 37px;
+	float: right;
+	color: white;
+}

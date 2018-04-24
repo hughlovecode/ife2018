@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		.test {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #000;
+  height: 30px;
+  width: 150px;
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;/*这是清楚safria的内置select格式*/
+  
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url(img/black-arrow.gif) no-repeat 125px center;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+	</style>
+</head>
+<body>
+	<select class="test">
+		<option>111</option>
+		<option>111</option>
+	</select>
+
+</body>
+</html>

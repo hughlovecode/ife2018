@@ -1,0 +1,107 @@
+
+.container{
+  box-sizing: border-box;
+  border: 1px solid #999999;
+  padding: 10px;
+  height:auto ;
+  min-width: 500px;
+  
+}
+.row{  /*<!--必须这么写，container才不会溢出,在第二层div中用height：auto是无效的，只有第一层才有效,或者在父级元素中加入overflow，再用auto-->
+  content: "";
+  display: table;
+  clear: both;
+  width: 100%;*/
+  width: 100%;
+  display: table;/*此句让嵌套div高度自适应*/
+  
+  }
+@media only screen and (min-width: 769px){
+  .col-md-4{
+  height: 50px;
+  width: calc(33.333% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+.col-md-3{
+  height: 50px;
+  width: calc(25% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+.col-md-6{
+  height: 50px;
+  width: calc(50% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+.col-md-1{
+  height: 50px;
+  width: calc(8.333% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+.col-md-2{
+  height: 50px;
+  width: calc(16.667% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+}
+
+}
+
+@media only screen and (max-width: 768px){
+  .col-sm-6{
+  height: 50px;
+  width: calc(50% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+  }
+  .col-sm-12{
+  height: 50px;
+  width: calc(100% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+  }
+  .col-sm-3{
+  height: 50px;
+  width: calc(25% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+  }
+  .col-sm-2{
+  height: 50px;
+  width: calc(16.667% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+  }
+  .col-sm-8{
+  height: 50px;
+  width: calc(66.66% - 22px);
+  background-color: rgb(238,238,238);
+  float: left;
+  margin: 10px;
+  border:1px solid black;
+  }
+  
+}
+
+
