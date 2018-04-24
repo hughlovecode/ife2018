@@ -1,0 +1,195 @@
+<!--squreHeight的统计有bug，删除第一个数字要删除两边才行-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task5-02</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<input type="text" name="text" id="text1" style="height: 20px;
+	width: 150px;">
+	<button id="leftInsert" onclick="InsertLeft()" >左侧入</button>
+	<button id="leftDrop" onclick="leftDrop()">左侧出</button>
+	<button id="rightInsert" onclick="InsertRight()">右侧入</button>
+	<button id="rightDrop" onclick="rightDrop()">右侧出</button>
+	<button onclick="test()">CountArrayNumber</button>
+	<button onclick="sortArray()">sort</button>
+	<ul id="ul1">
+		
+		
+	</ul>
+	
+</body>
+<script type="text/javascript">
+	var squreHeight=new Array();
+	var n=0;
+	function test()
+	{
+		var test=document.getElementById("ul1").getElementsByTagName("li");
+		alert(n);
+		alert(squreHeight[n-1]);
+	}
+	
+	function judgeNumber() //判断输入是否符合要求
+	{
+		var text1=document.getElementById("text1").value;
+		if(text1=="")
+		{
+			alert("your input is null!");
+			return;
+		}
+		else if(isNaN(text1))
+		{
+			alert("please input number");
+			return;
+		}
+		/*else
+		{
+			return parseInt(text1);
+		}*/
+		else{
+			var temp=parseInt(text1);
+			if (temp<10||temp>100) {
+				alert("please input a number which is 10-100");
+			}
+			else{
+				if(squreHeight.length>60)
+				{
+					alert("队列已超过60");
+				}
+				else{
+					return parseInt(text1);
+				}
+			}
+		}
+	}
+	function leftInsert(text1)    //左侧入
+	{	
+		squreHeight.splice(0,0,text1);
+		//squreHeight[n]=text1;
+		n++;
+		var text2=text1;
+		var ul1=document.getElementById("ul1");
+		var li=document.createElement("li");
+		var divTest=document.createElement("div");
+		li.style="display:table-cell";
+		divTest.style.height=text2+"px";
+		divTest.style.width="20px";
+		divTest.style.backgroundColor="#ccc";
+		divTest.style.marginRight="10px";
+		li.appendChild(divTest);
+		/*li.innerHTML='<div style="height:100%;width:100%;background-color:red;"></div>';*/
+		ul1.insertBefore(li,ul1.firstChild);
+	}
+	function RightInsert(text1)   //右侧入
+	{
+		squreHeight[n]=text1;
+		//squreHeight.splice(0,0,text1);
+		n++;
+		var text2=text1;
+		var ul1=document.getElementById("ul1");
+		var li=document.createElement("li");
+		var divTest=document.createElement("div");
+		li.style="display:table-cell";
+		divTest.style.height=text2+"px";
+		divTest.style.width="20px";
+		divTest.style.backgroundColor="#ccc";
+		divTest.style.marginRight="10px";
+		li.appendChild(divTest);
+		/*li.innerHTML='<div style="height:100%;width:100%;background-color:red;"></div>';*/
+		ul1.appendChild(li);
+
+	}
+	function leftDrop()       //左侧删除
+	{
+		
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+squreHeight[0]+"?")//不能用innerhtml，否则输出内容包含html语言
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.firstChild);
+			squreHeight.shift();
+			n--;
+			alert(squreHeight);
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+	function rightDrop()     //右侧删除
+	{
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+squreHeight[n-1]+"?")
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.lastChild);
+			squreHeight.pop();
+			n--;
+			alert(squreHeight);
+
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+
+	function InsertLeft()      //调用数字规范判断函数和左侧入函数
+	{
+		var x=judgeNumber();
+		if(!isNaN(x))
+		{
+			leftInsert(x);
+
+		}
+		//initaliseArray();
+	}
+	function InsertRight()
+	{
+		var x=judgeNumber();
+		if(!isNaN(x))
+		{
+			RightInsert(x);
+
+		}
+		//initaliseArray();
+	}
+	function sortArray()  //排序 升序
+	{
+		function exchange(a,b)
+	{
+		return b-a;
+	}
+
+		squreHeight.sort(exchange);
+		var ul1=document.getElementById("ul1");
+		var ulli=ul1.getElementsByTagName("li");
+		var lengthArray=ulli.length;
+		for(var x=0;x<lengthArray;x++)//清除原有ul内容
+		{
+			ul1.removeChild(ul1.firstChild)
+
+		}
+		
+		for(var i=0;i<squreHeight.length;i++)//重新构造ul里面相关li
+		{
+			//var ul1=document.getElementById("ul1");
+			var li=document.createElement("li");
+			var divTest=document.createElement("div");
+			li.style.display="table-cell";
+			divTest.style.width="20px";
+			divTest.style.backgroundColor="#ccc";
+			divTest.style.marginRight="10px";
+			divTest.style.height=squreHeight[i]+"px";
+			li.appendChild(divTest);
+			ul1.appendChild(li);
+		}
+}
+
+
+</script>
+</html>

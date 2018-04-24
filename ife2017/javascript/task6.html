@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task6</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<textarea id="text1"></textarea>	
+	<button id="leftInsert" onclick="InsertLeft()" >左侧入</button>
+	<button id="rightInsert" onclick="InsertRight()">右侧入</button>
+	<button id="leftDrop" onclick="leftDrop()">左侧出</button>
+	<button id="rightDrop" onclick="rightDrop()">右侧出</button>
+	<input type="text" value="" id="searchContent" >
+	<button onclick="search()">查找</button>
+
+	<ul id="ul1">
+		
+		
+	</ul>
+
+</body>
+<script type="text/javascript">
+	var arr=new Array();
+	function initalLeft()
+	{
+		var text1=document.getElementById("text1").value;
+		var space=/[^0-9a-zA-Z\u4e00-\u9fa5]/g;   //利用正则表达式匹配非数字字母汉字的字符
+		var initalreplace=text1.replace(space,' ');//将匹配到字符替换成空格
+		arr=initalreplace.split(' ');//分割字符串，并拼凑成数组
+		//alert(arr);
+		for(var i=0;i<arr.length;i++)
+		{
+			var ul1=document.getElementById("ul1");
+			var li=document.createElement("li");
+			li.style.display="block";
+			li.style.float="left";
+			li.style.margin="10px";
+			li.style.backgroundColor="red";
+			li.innerHTML='<div style="padding:5px;font-size:16px">'+arr[i]+'</div>';		
+			ul1.insertBefore(li,ul1.firstChild);
+			
+		}
+
+	}
+	function initalRight()
+	{
+		var text1=document.getElementById("text1").value;
+		var space=/[^0-9a-zA-Z\u4e00-\u9fa5]/g;   //利用正则表达式匹配非数字字母汉字的字符
+		var initalreplace=text1.replace(space,' ');//将匹配到字符替换成空格
+		arr=initalreplace.split(' ');//分割字符串，并拼凑成数组
+		//alert(arr);
+		for(var i=0;i<arr.length;i++)
+		{
+			var ul1=document.getElementById("ul1");
+			var li=document.createElement("li");
+			li.style.display="block";
+			li.style.float="left";
+			li.style.margin="10px";
+			li.style.backgroundColor="red";
+			li.innerHTML='<div style="padding:5px;font-size:16px">'+arr[i]+'</div>';
+			ul1.appendChild(li);
+		}
+		
+	}
+
+	function InsertLeft()
+	{
+		var text1=document.getElementById("text1").value;
+		if(text1=="")
+		{
+			alert("your input is null!");
+			return;
+		}
+		else
+		{
+			initalLeft();
+		}
+	}
+
+	function InsertRight()
+	{
+		var text1=document.getElementById("text1").value;
+		if(text1=="")
+		{
+			alert("your input is null!");
+			return;
+		}
+		else
+		{
+			initalRight();
+		}
+	}
+	
+	function leftDrop()
+	{
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+ul1.firstChild.innerText+"?")//不能用innerhtml，否则输出内容包含html语言
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.firstChild)
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+	function rightDrop()
+	{
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+ul1.lastChild.innerText+"?")
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.lastChild)
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+	function search()
+	{
+		var li=document.getElementsByTagName("li");
+		var searchContent=document.getElementById("searchContent").value;
+		var height=new Array();
+		for(var i=0;i<li.length;i++)
+		{
+			height[i]=li[i].innerText;
+
+		}
+		for(var n=0;n<li.length;n++)
+		{
+			if(height[n].search(searchContent)>=0)//比较的是字符串，不是数字，不能用parseInt
+			{
+				li[n].style.backgroundColor="yellow";
+			}
+			/*else
+			{
+				alert(li[n].innerText+"没有"+searchContent);
+			}*/
+		}
+		
+	}
+
+	
+
+
+</script>
+</html>

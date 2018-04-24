@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task4-02</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+	<input type="text" name="text" id="text1" style="height: 20px;
+	width: 150px;">
+	<button id="leftInsert" onclick="InsertLeft()" >左侧入</button>
+	<button id="leftDrop" onclick="leftDrop()">左侧出</button>
+	<button id="rightInsert" onclick="InsertRight()">右侧入</button>
+	<button id="rightDrop" onclick="rightDrop()">右侧出</button>
+	<button onclick="test()">CountArrayNumber</button>
+	<ul id="ul1">
+		
+		
+	</ul>
+
+</body>
+<script type="text/javascript">
+	function test()
+	{
+		var test=document.getElementById("ul1").getElementsByTagName("li");
+		alert(test.length);
+	}
+	function judgeNumber()
+	{
+		var text1=document.getElementById("text1").value;
+		if(text1=="")
+		{
+			alert("your input is null!");
+			return;
+		}
+		else if(isNaN(text1))
+		{
+			alert("please input number");
+			return;
+		}
+		else
+		{
+			return parseInt(text1);
+		}
+	}
+	function leftInsert(text1)
+	{
+		var text2=text1;
+		var ul1=document.getElementById("ul1");
+		var li=document.createElement("li");
+		li.style="display:table-cell";
+		li.innerHTML='<div style="height:30px;width:60px;background-color:red;margin:10px;font-size:18px;text-align:center;line-height:30px;">'+text2+'</div>';
+		
+		ul1.insertBefore(li,ul1.firstChild);
+
+
+	}
+	function RightInsert(text1)
+	{
+		var text2=text1;
+		var ul1=document.getElementById("ul1");
+		var li=document.createElement("li");
+		li.style="display:table-cell";
+		li.innerHTML='<div style="height:30px;width:60px;background-color:red;margin:10px;font-size:18px;text-align:center;line-height:30px;">'+text2+'</div>';
+		ul1.appendChild(li);
+
+	}
+	function leftDrop()
+	{
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+ul1.firstChild.innerText+"?")//不能用innerhtml，否则输出内容包含html语言
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.firstChild)
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+	function rightDrop()
+	{
+		var ul1=document.getElementById("ul1");
+		var confirm1=confirm("do you want to delete"+ul1.lastChild.innerText+"?")
+		if(confirm1==true)
+		{
+			ul1.removeChild(ul1.lastChild)
+		}
+		else
+		{
+			alert("we will not delete the number!")
+		}
+	}
+
+	function InsertLeft()
+	{
+		var x=judgeNumber();
+		if(!isNaN(x))
+		{
+			leftInsert(x);
+
+		}
+	}
+	function InsertRight()
+	{
+		var x=judgeNumber();
+		if(!isNaN(x))
+		{
+			RightInsert(x);
+
+		}
+	}
+
+
+</script>
+</html>
