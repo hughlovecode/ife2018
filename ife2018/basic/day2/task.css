@@ -1,0 +1,21 @@
+.contanier{
+	height: 360px;
+	width: 630px;
+	position: relative;
+	left: calc(50% - 315px);
+	margin-top: 180px;
+	border:1px solid #ccc;
+	padding-left: 10px;
+}
+.userHead{
+	height: 150px;
+	width: 150px;
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 100px;
+	background-image: url(userHead.jpg);
+	background-size: cover;
+	border-radius: 75px;
+	border:1px solid #ccc;
+}
